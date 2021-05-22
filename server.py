@@ -30,8 +30,13 @@ print("PORT =", a[35:40])
 
 
 def broadcast(message):
-    for client in clients:
-        client.send(message)
+    
+    try:
+        for client in clients:
+            client.send(message)
+
+    except:
+        pass
 
 def handle_client(client):
     while True:
@@ -56,8 +61,8 @@ def recieve_handler():
         unames.append(uname)
         clients.append(client)
         print(f'\033[1;32;40m{uname} Connected\033[0m')
-        broadcast(f"\033[93m{uname} Joined\033[0m\n".encode('ascii'))
-        client.send("\n\033[1;32;40mConnected to server\033[0m\n".encode('ascii'))
+        broadcast(f"\n\033[93m{uname} Joined\033[0m\n".encode('ascii'))
+        client.send("\033[1;32;40mConnected to server\033[0m\n".encode('ascii'))
 
         thread=threading.Thread(target=handle_client,args=(client,))
         thread.start()
