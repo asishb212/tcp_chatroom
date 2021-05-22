@@ -8,7 +8,7 @@ port=16156
 
 client=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.connect((local_host,port))
-uname=input("choose a name")
+uname=input("choose a name: ")
 
 def recieve():
     while True:
