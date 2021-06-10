@@ -1,18 +1,16 @@
 import socket
 import threading
+from sys import argv
 
 
 text_colour_dict = {'green': '\033[0;32m', 'red':'\033[0;31m', 'yellow':'\033[0;33m', 
                     'light_cyan':'\033[96m', 'light_yellow':'\033[93m', 
                     'bright_magenta':'\033[1;35;40m'}
 
-# ...........................EDITING BLOCK ...........................................
 
-local_host='0.tcp.ngrok.io'
-port=19772
-colour = 'bright_magenta'
-
-# ....................................................................................
+local_host = argv[1]
+port = int(argv[2])
+colour = argv[3] 
 
 colour_chosen = text_colour_dict[colour]
 
