@@ -20,9 +20,8 @@ A ngrok based tcp chatroom designed to simulate text-to-text communication.
 		python3 server.py
 
 * This will output a customized hostname and port number in the terminal, make sure you note these down beforehand.
-<br/>
-<br/>
-Sample output:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sample output:
 
 		HOSTNAME = 4.tcp.ngrok.io
 		PORT = 11947
